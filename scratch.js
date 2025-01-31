@@ -1,108 +1,154 @@
-var something = 3
+console.log("Hello")
+
+var myVariable = 3
 
 
-let somethingElse = 2
-console.log(somethingElse)
+let friend = "fish"
 
-// one line of code
-console.log(somethingElse)
-
-// one line of code
-console.log(
-    somethingElse
-)
-
-// two lines of code
-console.log(somethingElse); console.log(somethingElse);
-
-
-
-
-
-
-
-
-
-
-
-
-
-var friend = "fish"
-friend = "something else"
-
-var catCount = 1
-
-// How this line runs
-// 0) expand any shortening: catCount = catCount + 1
-// 1) it starts on the right hand side of the equal sign: catCount + 1
-// 2) Fill in any variables: 1 + 1
-// 3) Simplify down to one value: 2
-// 4) Then it goes to the left hand side of the equal sign and assigns the variable: catCount = 2
-
-//catCount = catCount + 1
-//catCount += 1
-catCount++ // shortening = catCount = catCount + 1
-
-console.log(catCount)
-
-
-var friend = "fish"
 friend = "hippo"
-friend += "cat" // friend = "hippocat"
+
+// real world scenario
+//let points = 0
+
+//points = 10
+
+//points = 20
+
+//points = 0
+
+read = false
+
+read = true
+
+//<img src="">
+
+// How the computer runs this line
+// 1) start on the right hand side of the equal sign
+// 2) simplify right hand side down to one value
+// 3) go to the left hand side, make the variable
+// 4) put the simplified value from the right hand side into the variable on the left hand side
+var total = 7.99 + 1.25
+
+var message = "Hello" + " there" // "Hello there"
 
 
-var playerPoints = 3
+var username = "Natalie"
+var greeting = "Hello " + username // "Hello Natalie"
 
-// usually don't want to do this because we specifically want playerPoints to change
-var playerPointsAdded = playerPoints + 1
+// Shorthands in Javascript
+let points = 0
 
-// We want to change the variable
-playerPoints = playerPoints + 1
-playerPoints++
+points += 10 // points = points + 10
 
+points += 10
 
+points += 10
 
+// What will points be now? 30!
 
+var fullName = "Natalie"
+fullName += " Childs" // fullName = fullName + " Childs"
 
+fullName // "Natalie Childs"
 
+// Operations with Booleans (Boolean Logic)
+let soundHappening = false
+let muted = true
 
+// real world example
+let showMessage = soundHappening && muted
+// let showMessage = false && !false
+// let showMessage = false && true
+// let showMessage = false
 
+// let showMessage = true && !false
+// let showMessage = true && true
+// let showMessage = true
+// then show the message "We can't hear you"
 
+if(true) {
+    // will run this code
+}
 
-var dogName
-var likesFetch
-var sheds
-var pottyTrained
-var likesSnuggles
+if(false) {
+    // will not run this code
+}
 
+if(soundHappening && muted) {
+    console.log("We can't hear you!")
+    // in a real app we'd add something to the HTML to show this message
+}
+
+let dogName
+let likesFetch
+let sheds
+let pottyTrained
+let likesSnuggles
+
+// Milo
 dogName = "Milo"
 likesFetch = true
 sheds = true
 pottyTrained = true
 likesSnuggles = true
+// && || ! ()
 
+// Bring those puzzle pieces together to make the logic
 // He wants it to be potty trained
 // He doesn’t want it to shed
 // He wants it to like to snuggle or like to play fetch (or both)
 
-// Check if Rafael should get Milo
-// Puzzle pieces: dogName likesFetch sheds pottyTrained likesSnuggles && || ! ()
-var shouldGetMilo = pottyTrained && !sheds && (likesSnuggles || likesFetch)
-console.log("Should get Milo: " + shouldGetMilo)
+// you could put it in a bowl mix it there, then put it in the pan
+let rafaelShouldGetMilo = pottyTrained && !sheds && (likesSnuggles || likesFetch)
+if(rafaelShouldGetMilo) {
+    console.log("Rafael should get Milo")
+}
 
+// Put it all in the pan and mix it there
+if(pottyTrained && !sheds && (likesSnuggles || likesFetch)) {
+    console.log("Rafael should get Milo")
+}
+
+// Penny
 dogName = "Penny"
 likesFetch = false
 sheds = false
 pottyTrained = true
 likesSnuggles = true
 
-// Using the same line of code, check if Rafael should get Penny
-var shouldGetPenny = pottyTrained && !sheds && (likesSnuggles || likesFetch)
-// pottyTrained && !sheds && (likesSnuggles || likesFetch)
-console.log("Should get Penny: " + shouldGetPenny)
+let rafaelShouldGetPenny = pottyTrained && !sheds && (likesSnuggles || likesFetch)
 
-// This is a question that comes out to a boolean
-dogName === "Banana"
+if(pottyTrained && !sheds && (likesSnuggles || likesFetch)) {
+    console.log("Rafael should get Penny")
+}
 
-// This is a statement that changes the variable
-dogName = "Banana"
+
+// Single equals =
+// Puts something in a box (assigns)
+// Statement
+sheds = pottyTrained
+// I am making sheds be whatever pottyTrained is
+
+// Triple equals (or double equals) ===
+// Asks if something is the same as something else
+// Question
+sheds === pottyTrained
+// Are these the same? Get a true or a false answer
+// Simplify to true or false
+
+
+// Double equals (BAD NEVER USE IT)
+// Does not check the data type
+// Automatically convert them to be the same data type
+// We can't trust auto-fix to do the right thing
+"3" == 3 // true
+
+// Triple equals
+// Does not automatically convert to be the same data type
+"3" === 3 // false
+
+
+// Something important
+// Data types matter in programming
+// string "false" is NOT the same as boolean false
+// string "3" is NOT the same as the number 3
