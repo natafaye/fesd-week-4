@@ -1,154 +1,86 @@
-console.log("Hello")
-
-var myVariable = 3
-
-
-let friend = "fish"
-
+var friend = "fish"
 friend = "hippo"
 
-// real world scenario
-//let points = 0
+var dishName = "Pho"
+var isTasty = true
+var price = 7.99
+// If it has quotation marks around ' " that is a string now
+// These are strings: "7.99" "false" "true" "isTasty"
 
-//points = 10
+// If it doesn't have quotation marks and it's letters 
+// it's going to look for a variable called that (if it's not a keyword/magic word)
 
-//points = 20
+var fee = 1.25
+var total = 7.99 + fee
 
-//points = 0
+console.log(total)
 
-read = false
+total += 5.99 // total = total + 5.99
 
-read = true
+console.log(total)
 
-//<img src="">
-
-// How the computer runs this line
-// 1) start on the right hand side of the equal sign
-// 2) simplify right hand side down to one value
-// 3) go to the left hand side, make the variable
-// 4) put the simplified value from the right hand side into the variable on the left hand side
-var total = 7.99 + 1.25
-
-var message = "Hello" + " there" // "Hello there"
-
-
-var username = "Natalie"
-var greeting = "Hello " + username // "Hello Natalie"
-
-// Shorthands in Javascript
-let points = 0
-
-points += 10 // points = points + 10
-
-points += 10
-
-points += 10
-
-// What will points be now? 30!
-
-var fullName = "Natalie"
-fullName += " Childs" // fullName = fullName + " Childs"
-
-fullName // "Natalie Childs"
-
-// Operations with Booleans (Boolean Logic)
-let soundHappening = false
-let muted = true
-
-// real world example
-let showMessage = soundHappening && muted
-// let showMessage = false && !false
-// let showMessage = false && true
-// let showMessage = false
-
-// let showMessage = true && !false
-// let showMessage = true && true
-// let showMessage = true
-// then show the message "We can't hear you"
-
-if(true) {
-    // will run this code
-}
-
-if(false) {
-    // will not run this code
-}
-
-if(soundHappening && muted) {
-    console.log("We can't hear you!")
-    // in a real app we'd add something to the HTML to show this message
-}
-
+// make the variables
 let dogName
 let likesFetch
 let sheds
 let pottyTrained
 let likesSnuggles
 
-// Milo
+// set them to the Milo data
 dogName = "Milo"
 likesFetch = true
 sheds = true
 pottyTrained = true
 likesSnuggles = true
+// dogName likesFetch sheds pottyTrained likesSnuggles
 // && || ! ()
 
-// Bring those puzzle pieces together to make the logic
+// check if Rafael should adopt Milo
+// true if Rafael would like Milo and false if he would not
 // He wants it to be potty trained
 // He doesn’t want it to shed
 // He wants it to like to snuggle or like to play fetch (or both)
+let shouldAdoptMilo = pottyTrained && !sheds && (likesSnuggles || likesFetch)
+//  false
+console.log("Should I get Milo?", shouldAdoptMilo)
 
-// you could put it in a bowl mix it there, then put it in the pan
-let rafaelShouldGetMilo = pottyTrained && !sheds && (likesSnuggles || likesFetch)
-if(rafaelShouldGetMilo) {
-    console.log("Rafael should get Milo")
-}
-
-// Put it all in the pan and mix it there
-if(pottyTrained && !sheds && (likesSnuggles || likesFetch)) {
-    console.log("Rafael should get Milo")
-}
-
-// Penny
+// set them to the Penny data
 dogName = "Penny"
 likesFetch = false
 sheds = false
 pottyTrained = true
 likesSnuggles = true
 
-let rafaelShouldGetPenny = pottyTrained && !sheds && (likesSnuggles || likesFetch)
+// check if Rafael should adopt Penny
+let shouldAdoptPenny = pottyTrained && !sheds && (likesSnuggles || likesFetch)
+console.log("Should I get Penny?", shouldAdoptPenny)
 
-if(pottyTrained && !sheds && (likesSnuggles || likesFetch)) {
-    console.log("Rafael should get Penny")
-}
 
 
 // Single equals =
-// Puts something in a box (assigns)
-// Statement
-sheds = pottyTrained
-// I am making sheds be whatever pottyTrained is
-
-// Triple equals (or double equals) ===
-// Asks if something is the same as something else
+// Command
+// myName = "Natalie"
+// Hey you! Your name is Natalie now.
+// Triple equals ===
 // Question
-sheds === pottyTrained
-// Are these the same? Get a true or a false answer
-// Simplify to true or false
+// myName === "Natalie"
+// Is your name Natalie? true/false answer
+
+// BAD WRONG: Double equals ==
+// swear word, don't use it unless you like crying
+// the awkward autocorrect of operators
 
 
-// Double equals (BAD NEVER USE IT)
-// Does not check the data type
-// Automatically convert them to be the same data type
-// We can't trust auto-fix to do the right thing
-"3" == 3 // true
+// Fork in the road
+// do this or don't do this
+//if (SOMETHING THAT COMES OUT TO A BOOLEAN) {
+    // code that you may or may not want to do
+//}
 
-// Triple equals
-// Does not automatically convert to be the same data type
-"3" === 3 // false
+let age = 40
+let country = "USA"
+let money = 1
 
-
-// Something important
-// Data types matter in programming
-// string "false" is NOT the same as boolean false
-// string "3" is NOT the same as the number 3
+if ((age >= 21 || country === "Germany") && money >= 4.99) {
+    console.log("Here's a beer")
+}
