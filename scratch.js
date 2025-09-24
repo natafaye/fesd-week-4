@@ -1,86 +1,125 @@
-var friend = "fish"
-friend = "hippo"
+console.log("Hello!")
 
-var dishName = "Pho"
-var isTasty = true
-var price = 7.99
-// If it has quotation marks around ' " that is a string now
-// These are strings: "7.99" "false" "true" "isTasty"
 
-// If it doesn't have quotation marks and it's letters 
-// it's going to look for a variable called that (if it's not a keyword/magic word)
 
-var fee = 1.25
+
+let price = 3.50
+
+console.log(price.toFixed(2))
+
+
+let amHungry = "3"
+
+
+var fee = 1.95
 var total = 7.99 + fee
 
-console.log(total)
 
-total += 5.99 // total = total + 5.99
 
-console.log(total)
+let friend = "fish"
+console.log(friend) // "fish"
 
-// make the variables
-let dogName
-let likesFetch
-let sheds
-let pottyTrained
-let likesSnuggles
+friend = 'hippo'
+console.log(friend) // "hippo"
 
-// set them to the Milo data
+friend += "fish" 
+console.log(friend) // "hippofish"
+
+// friend = "hippofish"
+
+
+
+// Code up at the top
+let itemsInCart = 0
+console.log(itemsInCart + " 🛒")
+
+
+// Code that runs when a Add to Cart button is clicked
+itemsInCart++
+console.log(itemsInCart + " 🛒")
+
+
+// Code that runs when a check out is completed
+itemsInCart = 0
+console.log(itemsInCart + " 🛒")
+
+// Rendering code (code that makes stuff show up to the user)
+console.log(itemsInCart + " 🛒")
+
+
+3 + 5
+
+"hello" + " there"
+
+true && false
+
+
+let paysWell = false
+let isLegal = true
+
+let takeJob = paysWell && isLegal
+
+
+let isRed = true
+let isGreen = false
+
+// Only be true if it's red and green
+// Want christmas
+let showInSearch = isRed && isGreen
+
+// More inclusive: red or green
+// Those are just my two favorite colors I don't need both
+let showInSearch2 = isRed || isGreen
+
+// I love red but I don't want it to look Christmas
+let showInSearch3 = isRed && !isGreen
+
+// This just makes a bunch of variables real quick
+let dogName, likesFetch, sheds, pottyTrained, likesSnuggles
+
+
+
+// He wants it to be potty trained
+// He doesn’t want it to shed
+// He wants it to like to snuggle or like to play fetch (or both)
+
+// dogName, likesFetch, sheds, pottyTrained, likesSnuggles
+// && || ! ()
+
+// Milo
 dogName = "Milo"
 likesFetch = true
 sheds = true
 pottyTrained = true
 likesSnuggles = true
-// dogName likesFetch sheds pottyTrained likesSnuggles
-// && || ! ()
 
-// check if Rafael should adopt Milo
-// true if Rafael would like Milo and false if he would not
-// He wants it to be potty trained
-// He doesn’t want it to shed
-// He wants it to like to snuggle or like to play fetch (or both)
-let shouldAdoptMilo = pottyTrained && !sheds && (likesSnuggles || likesFetch)
-//  false
-console.log("Should I get Milo?", shouldAdoptMilo)
+let adoptMilo = pottyTrained && !sheds && (likesSnuggles || likesFetch)
 
-// set them to the Penny data
+// Penny
 dogName = "Penny"
 likesFetch = false
 sheds = false
 pottyTrained = true
 likesSnuggles = true
 
-// check if Rafael should adopt Penny
-let shouldAdoptPenny = pottyTrained && !sheds && (likesSnuggles || likesFetch)
-console.log("Should I get Penny?", shouldAdoptPenny)
+let adoptPenny = pottyTrained && !sheds && (likesSnuggles || likesFetch)
+
+console.log("Milo? " + adoptMilo)
+console.log("Penny? " + adoptPenny)
+
+// == it does a type conversion
+// like autocorrect
+// It's not worth it, I promise
 
 
+// Too bad, you're friends with an alligator
+friend = "alligator"
 
-// Single equals =
-// Command
-// myName = "Natalie"
-// Hey you! Your name is Natalie now.
-// Triple equals ===
-// Question
-// myName === "Natalie"
-// Is your name Natalie? true/false answer
+// Is friend alligator? I don't know and I'm asking
+// You'll get a true or a false answer
+console.log(friend === "alligator")
 
-// BAD WRONG: Double equals ==
-// swear word, don't use it unless you like crying
-// the awkward autocorrect of operators
+let amIFriendsWithAlligator = (friend === "alligator")
+console.log("Friends with 🐊? " + amIFriendsWithAlligator)
 
-
-// Fork in the road
-// do this or don't do this
-//if (SOMETHING THAT COMES OUT TO A BOOLEAN) {
-    // code that you may or may not want to do
-//}
-
-let age = 40
-let country = "USA"
-let money = 1
-
-if ((age >= 21 || country === "Germany") && money >= 4.99) {
-    console.log("Here's a beer")
-}
+// Get emojis: windows + .
